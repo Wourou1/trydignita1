@@ -1,0 +1,585 @@
+/* --- Styles Généraux --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.page-container {
+    max-width: 900px; /* Largeur ajustée pour un article unique */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* --- En-tête du site --- */
+.site-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #8A2BE2; /* Violet comme sur l'image */
+    margin: 0;
+    font-style: italic;
+}
+
+/* --- Conteneur principal --- */
+.content-wrapper {
+    width: 100%;
+}
+
+/* --- Section Article --- */
+.main-article {
+    width: 100%;
+}
+
+.breadcrumb {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.article-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.article-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.main-banner-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+/* Boîte Auteur */
+.author-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.author-info strong {
+    font-size: 1rem;
+    color: #333;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 25px 0;
+}
+
+/* Corps de l'article */
+.article-body p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+}
+
+.article-body strong {
+    font-weight: 700;
+}
+
+/* --- Responsive pour Mobiles --- */
+@media (max-width: 576px) {
+    .site-header h1 {
+        font-size: 2rem;
+    }
+    
+    .article-title {
+        font-size: 1.5rem;
+    }
+    
+    .article-body p {
+        font-size: 1rem;
+    }
+    
+    .author-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* --- Styles pour la Section 2 --- */
+
+/* Style pour l'image dans le corps de l'article */
+.article-image {
+    width: 100%;
+    height: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+/* Style pour les liens dans le corps de l'article */
+.article-body a {
+    color: #004CFF;
+    /* text-decoration: underline; -- le <u> dans le HTML le fait déjà */
+}
+
+/* --- Styles pour la Section 3 --- */
+
+.section-title {
+    font-size: 1.8rem;
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.section-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 1.5em;
+}
+
+.section-subtitle .subtitle-number {
+    color: #7A38FF; /* Violet comme sur l'image */
+}
+
+.article-image-centered {
+    display: block;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin: 2em auto; /* Centrer l'image horizontalement */
+}
+
+.feature-list p {
+    margin-bottom: 1em; /* Espace entre les points de la liste */
+}
+
+/* Styles pour l'accordéon FAQ */
+.faq-accordion {
+    margin-top: 2em;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555;
+    transition: transform 0.2s ease-in-out;
+}
+
+.faq-answer {
+    padding: 0 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* Style pour l'état ouvert de l'accordéon */
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Hauteur suffisante pour le contenu */
+    padding: 0 16px 16px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+/* --- Styles pour la Section 3 (Corrigé) --- */
+
+/* --- Styles pour la Section 3 (Corrigé et Ajusté) --- */
+
+.article-section {
+    margin-top: 25px; /* Était 50px */
+    padding-top: 25px; /* Était 30px */
+    border-top: 1px solid #eee; /* Ligne de séparation visuelle */
+}
+.section-title {
+    font-size: 1.8rem;
+    margin-top: 0; /* On a déjà le margin sur .article-section */
+    margin-bottom: 0.5em;
+}
+
+.section-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 1.5em;
+}
+
+.section-subtitle .subtitle-number {
+    color: #7A38FF; /* Violet comme sur l'image */
+}
+
+.article-image-centered {
+    display: block;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin: 2em auto; /* Centrer l'image horizontalement */
+}
+
+.feature-list p {
+    margin-bottom: 1em; /* Espace entre les points de la liste */
+}
+
+/* Styles pour l'accordéon FAQ */
+.faq-accordion {
+    margin-top: 2em;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555;
+    transition: transform 0.2s ease-in-out;
+}
+
+.faq-answer {
+    padding: 0 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* Style pour l'état ouvert de l'accordéon */
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Hauteur suffisante pour le contenu */
+    padding: 0 16px 16px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+/* --- Styles pour la Section 6 (Bouton CTA) --- */
+
+.cta-container {
+    text-align: center;
+    margin-top: 40px; /* Espace au-dessus du bouton */
+}
+
+.cta-button-main {
+    display: inline-block;
+    background-color: #dfb52c; /* Jaune/doré de la capture */
+    color: #020202;
+    font-size: 1.5rem; /* 24px */
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button-main:hover {
+    background-color: #c9a221; /* Une teinte un peu plus foncée au survol */
+}
+/* --- Ajustement pour Section 11 --- */
+
+/* Ajoute un espace entre les accordéons quand ils se suivent */
+.faq-accordion + .faq-accordion {
+    margin-top: 10px;
+}
+
+/* --- Section Témoignages (Carrousel) --- */
+
+.testimonial-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 25%; /* 4 images sur grand écran */
+    box-sizing: border-box;
+    padding: 0 8px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(30, 30, 30, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.reviews-list {
+    margin-top: 20px;
+}
+
+.review-item {
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+
+/* Responsive pour tablettes et mobiles */
+@media (max-width: 992px) {
+    .carousel-slide {
+        flex: 0 0 33.33%; /* 3 images sur tablette */
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        flex: 0 0 50%; /* 2 images sur mobile */
+    }
+}
+/* --- Section Finale (Promo Box) --- */
+.final-promo-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.final-promo-section > p {
+    margin-bottom: 1.5em;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.promo-box {
+    background-color: #4a3b42;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.promo-box h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.promo-subtitle {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.promo-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+.promo-features {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+.promo-features li {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.promo-features li svg {
+    width: 18px;
+    height: 18px;
+    fill: #52C41A;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+/* --- Section Avis Finale --- */
+.customer-reviews-footer {
+    max-width: 900px;
+    margin: 40px auto; /* Centrer la section et ajouter de l'espace */
+    padding: 20px;
+}
+
+.customer-reviews-footer .section-title {
+    text-align: left;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace entre chaque avis */
+}
+
+.final-review-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.review-content h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.review-content p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.review-author {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-meta {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.stars {
+    color: #00C853; /* Vert pour les étoiles */
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.verified-buyer {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+    display: block;
+}
+
+.cta-button-final {
+    display: block;
+    background-color: #4d903f; /* Vert du bouton */
+    color: #ffffff !important; /* Couleur du texte en blanc, !important pour forcer */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 18px 25px;
+    border-radius: 6px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button-final:hover {
+    background-color: #3a6d2f;
+    color: #ffffff !important; /* Assure que le texte reste blanc au survol */
+}
+
+/* Responsive pour les avis finaux */
+@media (max-width: 600px) {
+    .final-review-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .review-meta {
+        text-align: left;
+        margin-top: 10px;
+    }
+}
