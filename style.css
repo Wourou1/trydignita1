@@ -566,7 +566,59 @@ body {
     margin-top: 30px;
     transition: background-color 0.3s ease;
 }
+/* --- Bouton CTA Sticky Centré --- */
+.sticky-cta {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(150px);
+    background-color: #dfb52c;
+    color: #020202 !important;
+    text-decoration: none;
+    padding: 18px 45px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
 
+.sticky-cta.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: all;
+}
+
+.sticky-cta:hover {
+    background-color: #c9a221;
+    transform: translateX(-50%) translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #020202 !important;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .sticky-cta {
+        padding: 15px 35px;
+        font-size: 1rem;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sticky-cta {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+        bottom: 15px;
+        width: 85%;
+        max-width: 320px;
+    }
+}
 .cta-button-final:hover {
     background-color: #3a6d2f;
     color: #ffffff !important; /* Assure que le texte reste blanc au survol */
